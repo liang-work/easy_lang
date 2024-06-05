@@ -25,6 +25,7 @@ exit or exit() -exit
 update or upgrade -Updater(Note: The current version does not support automatic updates, and you need to manually overwrite the file upgrade)
 cls or clear -clear cmd
 help -Get help
+
 ---------------------------------------------
 Future updates:
 
