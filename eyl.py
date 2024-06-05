@@ -29,7 +29,7 @@ try:
         i_v = input(f"{lj} >>>")
         logging.info(f"[user]: {i_v}")
         code = i_v.split()
-        print(code)
+        #print(code)
         huancun.co_de = code
         if code:
             if code[0] == 'version' or code[0] == '-V':
