@@ -21,9 +21,13 @@ The following command is already in place:
 -V or version -Check out the version
 
 setting -Go to Settings
+
 exit or exit() -exit
+
 update or upgrade -Updater(Note: The current version does not support automatic updates, and you need to manually overwrite the file upgrade)
+
 cls or clear -clear cmd
+
 help -Get help
 
 ---------------------------------------------
