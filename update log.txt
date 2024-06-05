@@ -1,0 +1,13 @@
+This is a new language, and it is made in python.
+It's completely free and public.
+Although it is rudimentary,but I believe in future it get good.
+Thank you!
+Feedback mailbox: exeliang@outlook.com
+						  ----by liang-work@github.com
+
+---------------------------------------1.0--------------------------------------
+1.00.0update log:
+The official version is released.
+
+
+END.

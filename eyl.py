@@ -1,7 +1,6 @@
 import json
 import os
 import logging
-import pprint
 import io
 import dayin
 import huancun
@@ -14,6 +13,7 @@ lang_list = ['zh_cn.json','en_us.json','zh_ft.json']
 with open("shuju.json",'r') as f:
     shuju = json.load(f)
     f.close()
+lang_list = shuju['lang_list']
 lang_xz = str(lang_list[shuju['lang_xl']])
 lang = {}
 with open(f'lang/{lang_xz}','r') as f:
@@ -48,6 +48,8 @@ try:
                 if  not len(code) >1:
                     os.system("cls")
                     logging.info("[System]: clear cmd!")
+            if code[0] == 'update' or code[0] == 'upgrade':
+                updatefile.update()
             #if len(code) >=1:
                 #dy = dayin.bl_dy
             

@@ -9,6 +9,7 @@ logging.basicConfig(format='%(asctime)s: %(filename)s [%(levelname)s]: %(message
 with open("shuju.json",'r') as f:
     shuju = json.load(f)
     f.close()
+lang_list = shuju['lang_list']
 lang_xz = str(lang_list[shuju['lang_xl']])
 lang = {}
 with open(f'lang/{lang_xz}','r') as f:
@@ -27,6 +28,8 @@ def qcsy():
     lang_bt.place_forget()
     lang_bt_2.place_forget()
     lang_bt_3.place_forget()
+    lang_bt_4.place_forget()
+    lang_bt_5.place_forget()
     lang_back.place_forget()
     up_bt.place_forget()
     up_lxy_et.place_forget()
@@ -44,6 +47,10 @@ def lang_setting():
         logging.info(f"[setting]: {lang['lang_set_us']}")
     elif num == 2:
         logging.info(f"[setting]: {lang['lang_set_zh_ft']}")
+    elif num == 3:
+        logging.info(f"[setting]: {lang['lang_set_fe']}")
+    elif num == 4:
+        logging.info(f"[setting]: {lang['lang_set_ru']}")
     shuju['lang_xl'] = num
     with open('shuju.json','w') as f:
         json.dump(shuju,f)
@@ -55,6 +62,8 @@ def lang_set():
     lang_bt.place(x=100,y=100+40,anchor='w')
     lang_bt_2.place(x=100,y=100-40,anchor='w')
     lang_bt_3.place(x=100,y=100,anchor='w')
+    lang_bt_4.place(x=100,y=180,anchor='w')
+    lang_bt_5.place(x=100,y=20,anchor='w')
     lang_back.place(x=300,y=100,anchor='w')
 def reload():
     logging.debug("[setting]: reload!")
@@ -81,6 +90,8 @@ bt_1 = tk.Button(root,text=lang['lang_name'],command=lang_set)
 lang_bt = tk.Radiobutton(root,text=lang['lang_cn'],variable=var,value=0)
 lang_bt_2 = tk.Radiobutton(root,text=lang['lang_us'],variable=var,value=1)
 lang_bt_3 = tk.Radiobutton(root,text=lang['lang_ft'],variable=var,value=2)
+lang_bt_4 = tk.Radiobutton(root,text=lang['lang_fe'],variable=var,value=3)
+lang_bt_5 = tk.Radiobutton(root,text=lang['lang_ru'],variable=var,value=4)
 lang_back = tk.Button(root,text=lang['bk_an_sa'],command=lang_setting)
 re_bt = tk.Button(root,text=lang['reload'],command=reload)
 up_bt = tk.Button(root,text=lang['up_set'],command=up_date)

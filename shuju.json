@@ -1,1 +1,1 @@
-{"lang_xl": 0, "version": "0.98(beta)", "update": {"version":1,"auto_update": true, "update_URL": "https://github.com/liang-work/easy_lang/archive/refs/heads/main.zip"}}
+{"lang_xl": 0, "lang_list": ["zh_cn.json", "us_en.json", "zh_ft.json", "fe.json", "ru.json"], "version": "1.00.0(Official version)", "update": {"version": 1, "auto_update": false, "update_URL": "https://github.com/liang-work/easy_lang/archive/refs/heads/main.zip"}}
