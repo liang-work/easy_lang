@@ -10,6 +10,10 @@ Feedback mailbox: exeliang@outlook.com
 1.00.0 update log:
 The official version is released.
 
+1.00.5update log:
+Remove the "Update Settings" button.
+Make some changes to the language settings interface.
+
 update log:
 https://github.com/liang-work/easy_lang/blob/main/update%20log.txt
 
