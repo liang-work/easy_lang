@@ -19,6 +19,8 @@
     "lang_set_fe": "Set the language to French",
     "lang_set_ru": "set the language to Russian",
     "lang_set_al": "Set the language to Arabic",
+    "clear_cache": "Clear cache data" ,
+    "set_run_error": "The settings UI cannot be opened, do you want to use the terminal settings interface?" ,
     "Help_Lister": "Help - Get Help  Emplint - Print Text or Variables  Necht or Exeter () - Exit Program Ensetin - Enter Settings Choi  Nifsen - View Version ( - View Hellp File Version)",
     "keyerror":"keyword error, the exception occurs mainly in the dictionary, may be trying to access a key that does not exist in the dictionary",
     "syntaxerror": "There is an error in the syntax, the compiler stops running",

@@ -9,5 +9,12 @@ Feedback mailbox: exeliang@outlook.com
 1.00.0update log:
 The official version is released.
 
+1.00.5update log:
+Remove the "Update Settings" button.
+Make some changes to the language settings interface.
+
+1.00.75
+Added the ability to use the settings terminal when the settings UI is not available.
+Add some features
 
 END.

@@ -5,20 +5,22 @@
     "bk_an_sa":"保存並返回",
     "reload":"重新載入",
     "lang_name":"語言",
-    “lang_cn”：“中文簡體”，
-    “lang_us”：“英文”，
-    “lang_ft”：“中文繁體”，
-    “lang_fe”：“法語”，
-    “lang_ru”：“俄語”，
-    “lang_al”：“阿拉伯文”，
-    “eyl_version”：“eyl主程式版本”，
-    “load_value”：“檔正在載入... 完成！ ",
-    “lang_set_zh_cn”：“將語言設為中文（簡體）”，
-    “lang_set_zh_ft”：“將語言設為中文（繁體）”，
-    “lang_set_us”：“將語言設為英文”，
-    “lang_set_fe”：“將語言設為法語”，
-    “lang_set_ru”：“將語言設為俄語”，
-    “lang_set_al”：“將語言設為阿拉伯文”，
+    "lang_cn":"中文簡體",
+    "lang_us":"英文",
+    "lang_ft":"中文繁體",
+    "lang_fe":"法語",
+    "lang_ru":"俄語",
+    "lang_al":"阿拉伯文",
+    "eyl_version":"eyl主程式版本",
+    "load_value":"檔正在載入... 完成！ ",
+    "lang_set_zh_cn":"將語言設為中文（簡體）",
+    "lang_set_zh_ft":"將語言設為中文（繁體）",
+    "lang_set_us":"將語言設為英文",
+    "lang_set_fe":"將語言設為法語",
+    "lang_set_ru":"將語言設為俄語",
+    "lang_set_al":"將語言設為阿拉伯文",
+    "clear_cache":"清除緩存數據",
+    "set_run_error":"設置UI無法開啟，是否使用終端設置介面？",
     "help_list":"help -獲取説明 \nprint -列印文本或變數 \nexit 或 exit() -退出程式 \nsetting -進入設置UI \nversion -查看版本（-V查看help檔版本）",
     "keyerror":"關鍵字錯誤,異常主要發生在字典中,可能在試圖訪問一個字典中不存在的鍵",
     "syntaxerror":"語法出現錯誤,編譯器停止運行",

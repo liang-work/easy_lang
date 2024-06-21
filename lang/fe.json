@@ -19,6 +19,8 @@
     "lang_set_fe": "D¨¦finir la langue sur le fran?ais",
     "lang_set_ru": "d¨¦finir la langue sur le russe",
     "lang_set_al": "D¨¦finir la langue sur l¡¯arabe",
+    "clear_cache": "Effacer les donnes du cache ",
+    "set_run_error": "L¡¯interface utilisateur des param¨¨tres ne peut pas ¨ºtre ouverte, voulez-vous utiliser l¡¯interface des param¨¨tres du terminal ?",
     "help_list":"help - get help nprint - print text or variable nexit ou exit() - exit the program nsetting - go to the settings UI nversion - view the version (-V view the help file version)",
     "keyerror":"erreur de mot-cl¨¦, l¡¯exception se produit principalement dans le dictionnaire, peut ¨ºtre une tentative d¡¯acc¨¨s ¨¤ une cl¨¦ qui n¡¯existe pas dans le dictionnaire",
     "syntaxerror": "Il y a une erreur dans la syntaxe, le compilateur s¡¯arr¨ºte",

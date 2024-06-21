@@ -19,6 +19,8 @@
     "lang_set_fe":"将语言设为法语",
     "lang_set_ru":"将语言设为俄语",
     "lang_set_al":"将语言设为阿拉伯语",
+    "clear_cache":"清除缓存数据",
+    "set_run_error":"设置UI无法开启，是否使用终端设置界面？",
     "help_list":"help -获取帮助 \nprint -打印文本或变量 \nexit 或 exit() -退出程序 \nsetting -进入设置UI \nversion -查看版本(-V查看help文件版本)",
     "keyerror":"关键字错误,异常主要发生在字典中，可能在试图访问一个字典中不存在的键",
     "syntaxerror":"语法出现错误，编译器停止运行",
