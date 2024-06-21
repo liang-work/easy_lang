@@ -15,4 +15,4 @@ co_de = huancun.co_de
 print(len(co_de))
 if len(co_de) == 1:
     print(lang['help_list'])
-    logging.info(f'[System]: {lang['help_list']}')
+    logging.info(f'[System]: {lang["help_list"]}')
