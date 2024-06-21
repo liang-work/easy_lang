@@ -1,4 +1,6 @@
-Note: python is required for the procedure
+1.Note: python is required for the procedure
+
+2.Note that the program is based on Python 3.x
 
 ----------------------------------------------
 This is a new language, and it is made in python.
@@ -13,6 +15,10 @@ The official version is released.
 1.00.5update log:
 Remove the "Update Settings" button.
 Make some changes to the language settings interface.
+
+1.00.75
+Added the ability to use the settings terminal when the settings UI is not available.
+Add some features.
 
 update log:
 https://github.com/liang-work/easy_lang/blob/main/update%20log.txt
