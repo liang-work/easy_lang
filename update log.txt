@@ -17,4 +17,8 @@ Make some changes to the language settings interface.
 Added the ability to use the settings terminal when the settings UI is not available.
 Add some features
 
+1.05.0
+Support for automatic updates, as well as prepare for future updates.
+
+
 END.
