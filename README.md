@@ -56,7 +56,7 @@ Future updates:
 
 1.20.0 will be updated:
 
-1.Add printout function
+1.Add printout function(Note: It will be updated as an extension and will not be installed by default)
 
 =============================================
 
