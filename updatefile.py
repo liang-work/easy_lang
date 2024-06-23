@@ -1,13 +1,4 @@
-import pip
-try:
-    import wget
-except ImportError:
-    if input("wget module not found, do you want to install it?[y/n]") == 'y':
-        pip.main(['install','wget'])
-        import wget
-    else:
-        print("wget module not found, please install it manually")
-        exit()
+import wget
 import json
 import logging
 import os
@@ -30,91 +21,51 @@ with open(f'lang/{lang_xz}','r') as f:
     lang = json.load(f)
     f.close()
 url = shuju['update']['update_URL']
-if not shuju['update']['auto_update']:
+if shuju['update']['auto_update']:
     try:
-        os.remove("update the cache/shuju.json")
+        os.remove("\\update the cache\\shuju.json")
     except:
         pass
     wget.download(url_jc,out=cache_lj,bar=None)
-try:
+    #try:
     with open("update the cache/shuju.json",'r') as f:
             up_sj = json.load(f)
             f.close()
     if up_sj['update']['version'] > shuju['update']['version']:
-            wget.download(url,lj+"/update the cache",bar=None)
-            file = zipfile.ZipFile(lj+'\\update the cache\\easy_lang-main.zip')
-            file.extractall(lj + '\\update the cache\\easy_lang-main')
+            wget.download(url,lj,bar=None)
+            file = zipfile.ZipFile(lj+'\\easy_lang-main.zip')
+            file.extractall(lj + '\\update the cache\\easy_lang-main.zip')
             file.close()
-            get_files = os.listdir(lj+"\\update the cache\\easy_lang-main\\easy_lang-main\\")
-            base_dir = lj + '\\update the cache\\easy_lang-main\\easy_lang-main\\'
-            shutil.rmtree(lj + "\\lang\\")
-            shutil.move(lj + "\\update the cache\\easy_lang-main\\easy_lang-main\\lang\\",lj)
-            files = [os.path.join(base_dir,file) for file in os.listdir(base_dir)]
-            for g in files:
-                print(g)
-                shutil.copy2(g,lj + "\\")
-            get_files = os.listdir(lj + "\\update the cache\\")
-            for dirname in get_files:
-                dirname = lj + "\\update the cache" + "\\" + dirname
-                if os.path.isfile(dirname):
-                    os.remove(dirname)
-                elif os.path.isdir(dirname):
-                    dellist =os.listdir(dirname)
-                    for f in dellist:
-                        file_path = os.path.join(dirname,f)
-                        if os.path.isfile(file_path):
-                            os.remove(file_path)
-                        elif os.path.isdir(file_path):
-                            shutil.rmtree(file_path)
+            #os.remove(lj)
             print("ok!")
             logging.info("[update]: upgrade ok")
     else:
             os.remove(lj + "\\update the cache\\shuju.json")
-            print("no update")
-except FileNotFoundError:
+    #except FileNotFoundError:
     print("[update]: Don't update!")
     logging.warning("[System]: Don't update!")
 def update():
+    wget.download(url_jc,cache_lj + '\\shuju.json',bar=None)
     try:
-        os.remove("update the cache/shuju.json")
-    except:
-        pass
-    wget.download(url_jc,out=cache_lj,bar=None)
-try:
-    with open("update the cache/shuju.json",'r') as f:
+        with open(lj+"\\update the cache\\shuju.json",'r') as f:
             up_sj = json.load(f)
             f.close()
-    if up_sj['update']['version'] > shuju['update']['version']:
-            wget.download(url,lj+"/update the cache",bar=None)
-            file = zipfile.ZipFile(lj+'\\update the cache\\easy_lang-main.zip')
-            file.extractall(lj + '\\update the cache\\easy_lang-main')
+        if up_sj['update']['version'] > shuju['update']['version']:
+            wget.download(url,lj,bar=None)
+            file = zipfile.ZipFile(lj+'\\easy_lang-main.zip')
+            file.extractall(lj+'\\update the cache')
             file.close()
-            get_files = os.listdir(lj+"\\update the cache\\easy_lang-main\\easy_lang-main\\")
-            base_dir = lj + '\\update the cache\\easy_lang-main\\easy_lang-main\\'
-            shutil.rmtree(lj + "\\lang\\")
-            shutil.move(lj + "\\update the cache\\easy_lang-main\\easy_lang-main\\lang\\",lj)
-            files = [os.path.join(base_dir,file) for file in os.listdir(base_dir)]
-            for g in files:
-                print(g)
-                shutil.copy2(g,lj + "\\")
-            get_files = os.listdir(lj + "\\update the cache\\")
-            for dirname in get_files:
-                dirname = lj + "\\update the cache" + "\\" + dirname
-                if os.path.isfile(dirname):
-                    os.remove(dirname)
-                elif os.path.isdir(dirname):
-                    dellist =os.listdir(dirname)
-                    for f in dellist:
-                        file_path = os.path.join(dirname,f)
-                        if os.path.isfile(file_path):
-                            os.remove(file_path)
-                        elif os.path.isdir(file_path):
-                            shutil.rmtree(file_path)
+            #os.remove(lj)
             print("ok!")
+            print("注意：目前不支持主动将文件替换，需要手动操作")
             logging.info("[update]: upgrade ok")
-    else:
-            os.remove(lj + "\\update the cache\\shuju.json")
+        else:
+            os.remove(lj +"\\update the cache\\shuju.json")
             print("no update")
-except FileNotFoundError:
-    print("[update]: Don't update!")
-    logging.warning("[System]: Don't update!")
+            logging.info("[update]: no update")
+    except FileNotFoundError:
+        print("[System]: Don't update!")
+        logging.warning("[System]: Don't update!")
+    except:
+        print("未知错误！")
+    
