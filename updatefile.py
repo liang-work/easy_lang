@@ -23,6 +23,11 @@ with open(f'lang/{lang_xz}','r') as f:
 url = shuju['update']['update_URL']
 if shuju['update']['auto_update']:
     try:
+        os.chdir(lj)
+        os.makedirs("update the cache")
+    except:
+        pass
+    try:
         os.remove("\\update the cache\\shuju.json")
     except:
         pass
@@ -45,27 +50,30 @@ if shuju['update']['auto_update']:
     print("[update]: Don't update!")
     logging.warning("[System]: Don't update!")
 def update():
-    wget.download(url_jc,cache_lj + '\\shuju.json',bar=None)
     try:
-        with open(lj+"\\update the cache\\shuju.json",'r') as f:
+        os.chdir(lj)
+        os.makedirs("update the cache")
+    except:
+        pass
+    try:
+        os.remove("\\update the cache\\shuju.json")
+    except:
+        pass
+        wget.download(url_jc,out=cache_lj,bar=None)  
+    #try:
+    with open("update the cache/shuju.json",'r') as f:
             up_sj = json.load(f)
             f.close()
-        if up_sj['update']['version'] > shuju['update']['version']:
+    if up_sj['update']['version'] > shuju['update']['version']:
             wget.download(url,lj,bar=None)
             file = zipfile.ZipFile(lj+'\\easy_lang-main.zip')
-            file.extractall(lj+'\\update the cache')
+            file.extractall(lj + '\\update the cache\\easy_lang-main.zip')
             file.close()
             #os.remove(lj)
             print("ok!")
-            print("注意：目前不支持主动将文件替换，需要手动操作")
             logging.info("[update]: upgrade ok")
-        else:
-            os.remove(lj +"\\update the cache\\shuju.json")
-            print("no update")
-            logging.info("[update]: no update")
-    except FileNotFoundError:
-        print("[System]: Don't update!")
-        logging.warning("[System]: Don't update!")
-    except:
-        print("未知错误！")
-    
+    else:
+            os.remove(lj + "\\update the cache\\shuju.json")
+    #except FileNotFoundError:
+    print("[update]: Don't update!")
+    logging.warning("[System]: Don't update!")
