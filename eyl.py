@@ -18,6 +18,7 @@ import huancun
 import updatefile
 import sys
 import platform
+#import Extended
 lj = os.path.abspath(__file__)
 logging.basicConfig(format='%(asctime)s: %(filename)s [%(levelname)s]: %(message)s',level=logging.DEBUG,filename='last_log.log',filemode='w')
 #Note that the English language comes from machine translation
@@ -71,7 +72,6 @@ logging.info(f"{lang['eyl_version']}:{shuju['version']}")
 logging.info(lang['load_value'])
 logging.info("start!")
 print("system:",sm['system']+ str(sm['s_b'])+f" python version:{sm['python_version']}"+" easy lang version:"+shuju['version'])
-#logging.info("system:",sm['system']+ str(sm['s_b'])+f" python version:{sm['python_version']}"+" easy lang version:"+shuju['version'])
 try:
     while True:
         i_v = ''
@@ -80,6 +80,8 @@ try:
         code = i_v.split()
         #print(code)
         huancun.co_de = code
+        #os.system("python Extended.py")
+        #Extended.ext(code)
         if code:
             if code[0] == 'version' or code[0] == '-V':
                 os.system("python version.py")
@@ -101,6 +103,8 @@ try:
                         os.system("python setting_2.py")
                     else:
                         pass
+            if code[0] == 'setting2':
+                os.system("python setting_2.py")
             if code[0] == 'help':
                 os.system("python helpfile.py")
             if code[0] == 'clear' or code[0] == 'cls':
@@ -115,8 +119,6 @@ try:
                 with open("cache.json",'w') as f:
                     json.dump(at_dt,f)
                     f.close()
-            #if len(code) >=1:
-                #dy = dayin.bl_dy
             
         else:
             continue
