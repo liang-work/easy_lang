@@ -4,6 +4,13 @@
     "ex_an_sa":"保存並退出",
     "bk_an_sa":"保存並返回",
     "reload":"重新載入",
+    “ext_ed”： “擴展管理”，
+    “it_ext”： “安裝選定的擴展”，
+    “dt_ext”： “卸載選定的擴展”，
+    “bk”： “返回”，
+    “auto_up”： “自動更新”，
+    “on”：“開啟”，
+    “off”：“關閉”，
     "lang_name":"語言",
     "lang_cn":"中文簡體",
     "lang_us":"英文",
