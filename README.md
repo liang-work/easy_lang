@@ -11,16 +11,23 @@ Although it is rudimentary,but I believe in future it get good.
 Thank you!
 Feedback mailbox: exeliang@outlook.com
 ---------------------------------------------
-1.00.0 update log:
+1.00.0 Changelog:
 The official version is released.
 
-1.00.5update log:
+1.00.5 Changelog:
 Remove the "Update Settings" button.
+
 Make some changes to the language settings interface.
 
-1.00.75
+1.00.75 Changelog:
 Added the ability to use the settings terminal when the settings UI is not available.
+
 Add some features.
+
+1.05.0 Changelog:
+Clear some of the redundant statements.
+
+Changed and updated the function module and improved other functions, and reserved the extended interface updated in version 1.20.0 (most of it has been completed, but it still cannot be used normally).
 
 update log:
 https://github.com/liang-work/easy_lang/blob/main/update%20log.txt
@@ -44,11 +51,6 @@ help -Get help
 
 ---------------------------------------------
 Future updates:
-
-1.05.0 will be updated:
-
-1.Improve automatic updates
-2.Add more languages
 
 1.10.0 will be updated:
 
